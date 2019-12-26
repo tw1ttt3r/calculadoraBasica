@@ -48,12 +48,12 @@ body .calculator {
   flex-direction: column;
 }
 body .calculator input {
-  height: 10vh;
-  font-size: 3em;
+  height: 20vh;
+  font-size: 4em;
   text-align: right;
 }
 body .calculator .keyboard-number {
-  height: 90vh;
+  height: 80vh;
   flex-direction: column;
 }
 body .calculator .keyboard-number .buttons {
@@ -68,6 +68,9 @@ body .calculator .keyboard-number .buttons button {
   width: 25%;
 }
 body .calculator .keyboard-number .buttons:nth-child(5) button:nth-child(2) {
+  flex-grow: 2;
+}
+body .calculator .keyboard-number .buttons:nth-child(1) button:nth-child(1) {
   flex-grow: 2;
 }
 

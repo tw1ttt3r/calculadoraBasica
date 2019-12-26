@@ -54,13 +54,13 @@ body {
         @extend %h-full;
         input {
             @extend %w-full;
-            @include height_custom(10vh);
-            font-size: 3em;
+            @include height_custom(20vh);
+            font-size: 4em;
             text-align: right;
         }
         .keyboard-number {
             @extend %w-full;
-            @include height_custom(90vh);
+            @include height_custom(80vh);
             @extend %flex;
             @include f-direction(column);
             .buttons {
@@ -76,6 +76,11 @@ body {
                 }
                 &:nth-child(5) {
                     button:nth-child(2) {
+                        flex-grow: 2;
+                    }
+                }
+                &:nth-child(1) {
+                    button:nth-child(1) {
                         flex-grow: 2;
                     }
                 }
