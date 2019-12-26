@@ -1,0 +1,90 @@
+.cortina .memory, body .calculator .keyboard-number .buttons, body .calculator .keyboard-number, body .calculator, body nav ul {
+  display: flex;
+}
+
+.cortina .memory, body .calculator .keyboard-number, body .calculator input, body .calculator, body .more button, body .more, body nav, body, html {
+  width: 100vw;
+}
+
+.cortina .memory, body .calculator, body, html {
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body nav {
+  background-color: lightblue;
+  display: none;
+}
+body nav.visible {
+  display: block;
+}
+body nav ul {
+  flex-direction: row-reverse;
+  list-style-type: none;
+  font-size: 2em;
+  font-weight: 500;
+}
+body nav ul li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body nav ul li:hover {
+  cursor: pointer;
+}
+body .more {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .more button {
+  background-color: lightblue;
+}
+body .calculator {
+  flex-direction: column;
+}
+body .calculator input {
+  height: 10vh;
+  font-size: 3em;
+  text-align: right;
+}
+body .calculator .keyboard-number {
+  height: 90vh;
+  flex-direction: column;
+}
+body .calculator .keyboard-number .buttons {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 22.5vh;
+}
+body .calculator .keyboard-number .buttons button {
+  text-align: center;
+  font-size: 1em;
+  border: 0.3px solid black;
+  width: 25%;
+}
+body .calculator .keyboard-number .buttons:nth-child(5) button:nth-child(2) {
+  flex-grow: 2;
+}
+
+.cortina {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+.cortina.visible {
+  visibility: visible;
+}
+.cortina .memory {
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main.css.map */

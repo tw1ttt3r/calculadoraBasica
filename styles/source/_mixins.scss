@@ -1,0 +1,19 @@
+@mixin f-direction($direction) {
+    flex-direction: $direction;
+}
+
+@mixin a-flex($align, $value) {
+    #{$align}: #{$value};
+}
+
+@mixin width_custom($width) {
+    width: $width;
+}
+
+@mixin height_custom($height) {
+    height: $height;
+}
+
+@mixin padding-custom($direction, $p-size) {
+    padding-#{$direction}: $p-size;
+}

@@ -1,0 +1,103 @@
+@import 'classes';
+@import 'mixins';
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    @extend %w-full;
+    @extend %h-full;
+}
+
+body {
+    @extend %w-full;
+    @extend %h-full;
+    nav {
+        @extend %w-full;
+        background-color: lightblue;
+        display: none;
+        &.visible {
+            display: block;
+        }
+        ul{
+            @extend %flex;
+            @include f-direction(row-reverse);
+            list-style-type: none;
+            font-size: 2em;
+            font-weight: 500;
+            li {
+                @include padding-custom(left, 15px);
+                @include padding-custom(right, 15px);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .more {
+        @extend %w-full;
+        position: absolute;
+        top: 0;
+        left: 0;
+        button {
+            @extend %w-full;
+            background-color: lightblue;
+        }
+    }
+    .calculator {
+        @extend %flex;
+        @include f-direction(column);
+        @extend %w-full;
+        @extend %h-full;
+        input {
+            @extend %w-full;
+            @include height_custom(10vh);
+            font-size: 3em;
+            text-align: right;
+        }
+        .keyboard-number {
+            @extend %w-full;
+            @include height_custom(90vh);
+            @extend %flex;
+            @include f-direction(column);
+            .buttons {
+                @extend %flex;
+                @include f-direction(row);
+                @include a-flex(justify-content, space-between);
+                height: (90vh / 4);
+                button {
+                    text-align: center;
+                    font-size: 1em;
+                    border: .3px solid black;
+                    @include width_custom(25%);
+                }
+                &:nth-child(5) {
+                    button:nth-child(2) {
+                        flex-grow: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+.cortina {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+    }
+    .memory {
+        @extend %flex;
+        @include f-direction(column);
+        @extend %w-full;
+        @extend %h-full;
+    }
+}
