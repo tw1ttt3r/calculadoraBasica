@@ -1,12 +1,13 @@
 var valores=[];
 var input = document.getElementsByTagName('input')[0];
+var calculado=0;
 
 function valueCurrent(valor) {
+    if (calculado) {
+        input.value="";
+        calculado=0;
+    }
     input.value+=valor;
-}
-
-function nextValue() {
-    input.value="";
 }
 
 function clearAll() {
@@ -34,24 +35,12 @@ function calculate() {
     }
     input.value = eval(valores.join(''));
     valores=[];
+    calculado = 1;
 }
 
 function addPoint() {
     if (!input.value.includes('.')) {
         input.value += ".";
-    }
-}
-
-function addSign(signo) {
-    var signo=Array.from(input.value);
-
-    if (input.value.length > 0) {
-        if (!input.value.includes("-")) {
-            signo.unshift('-');
-        } else {
-           signo.shift();
-        }
-        input.value=signo.join("");
     }
 }
 
